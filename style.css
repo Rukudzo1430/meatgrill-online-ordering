@@ -1,43 +1,190 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meatgrill | Online Ordering</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>MEATGRILL</h1>
-        <p>Good Food. Great Taste.</p>
-    </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#contact">Contact</a>
-    </nav>
+/* Meatgrill - The Home of Grill */
 
-    <main>
-        <section class="hero">
-            <h2>Welcome to Meatgrill</h2>
-            <p>Your favourite meals, just a few clicks away.</p>
-            <a class="order-button" href="#menu">Order Now</a>
-        </section>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <section id="menu">
-            <h2>Our Menu</h2>
-            <p>Explore our delicious meals. Menu items coming soon!</p>
-        </section>
+html {
+    scroll-behavior: smooth;
+}
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>We look forward to serving you.</p>
-        </section>
-    </main>
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf4;
+    color: #242424;
+    line-height: 1.6;
+}
 
-    <footer>
-        <p>&copy; 2026 Meatgrill. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+/* Header */
+header {
+    background: #1c1c1c;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    border-bottom: 4px solid #ff7900;
+}
+
+header h1 {
+    color: #ff7900;
+    font-size: 38px;
+    letter-spacing: 4px;
+}
+
+header p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Navigation */
+nav {
+    background: #292929;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff7900;
+}
+
+/* Welcome section */
+.hero {
+    background: linear-gradient(135deg, #171717, #383027);
+    color: white;
+    text-align: center;
+    padding: 95px 20px;
+}
+
+.tagline {
+    color: #ff7900;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: 46px;
+    margin-bottom: 12px;
+}
+
+.hero > p:not(.tagline) {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.order-button,
+.location-button {
+    display: inline-block;
+    background: #ff7900;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.order-button:hover,
+.location-button:hover {
+    background: #dc6500;
+}
+
+/* General sections */
+main section:not(.hero) {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+main section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#locations {
+    background: #fffaf4;
+}
+
+#menu {
+    background: white;
+}
+
+#about {
+    background: #f1e9df;
+}
+
+/* Location cards */
+.location-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+.location-card {
+    background: white;
+    border: 1px solid #ead9c8;
+    border-top: 5px solid #ff7900;
+    border-radius: 10px;
+    padding: 30px 22px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.location-card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.location-card p {
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background: #1c1c1c;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 4px solid #ff7900;
+}
+
+/* Mobile-friendly design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 70px 18px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .location-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-card {
+        max-width: 100%;
+    }
+}
